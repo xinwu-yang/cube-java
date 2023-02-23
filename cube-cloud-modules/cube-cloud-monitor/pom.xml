@@ -8,7 +8,7 @@
     <parent>
         <artifactId>cube-cloud-modules</artifactId>
         <groupId>org.cube.cloud</groupId>
-        <version>2.6.5</version>
+        <version>3.0.0</version>
     </parent>
 
     <dependencies>

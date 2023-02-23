@@ -10,7 +10,7 @@
     <parent>
         <artifactId>cube-dependencies</artifactId>
         <groupId>org.cube</groupId>
-        <version>2.6.5</version>
+        <version>3.0.0</version>
     </parent>
 
     <modules>
@@ -42,7 +42,7 @@
             <dependency>
                 <groupId>org.cube.plugin</groupId>
                 <artifactId>sql-export</artifactId>
-                <version>2.6.5</version>
+                <version>3.0.0</version>
             </dependency>
             <!-- aliyun oss -->
             <dependency>

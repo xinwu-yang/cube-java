@@ -8,7 +8,7 @@
     <parent>
         <artifactId>crypto-starter</artifactId>
         <groupId>org.cube.plugin</groupId>
-        <version>2.6.5</version>
+        <version>3.0.0</version>
     </parent>
 
     <dependencies>

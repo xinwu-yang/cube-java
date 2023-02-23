@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>cube-dependencies</artifactId>
     <groupId>org.cube</groupId>
-    <version>2.6.5</version>
+    <version>3.0.0</version>
     <packaging>pom</packaging>
 
     <parent>
@@ -27,7 +27,7 @@
 
     <properties>
         <!-- 基础依赖 -->
-        <cube.version>2.6.5</cube.version>
+        <cube.version>3.0.0</cube.version>
         <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
         <sa-token.version>1.33.0</sa-token.version>
         <hutool.version>5.8.11</hutool.version>
