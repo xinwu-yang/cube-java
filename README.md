@@ -1,6 +1,6 @@
 # 魔方快速开发平台
 
-### 版本: 2.6.x
+### 版本: 3.0.x
 
 ### 运行和构建环境
 
@@ -16,13 +16,6 @@
     - Sa-Token 1.33.0
     - HuTool 5.8.11
     - SpringDoc 1.6.13
-    - 魔方插件:
-        - crypto-starter 1.1.0
-        - sql-export 1.1.4
-        - sensitive-starter 1.2.1
-        - file-manager-starter 1.2.2
-        - easy-excel 1.2.1
-        - magic-map-starter 1.0.5
 - 微服务框架:
     - SpringCloud 2021.0.4
         - Gateway
@@ -36,12 +29,6 @@
     - Redisson 3.17.7
     - ShardingSphere 5.1.2
     - SpringBootAdmin 2.6.9
-
-### 源码拉取
-
-```shell
-git clone --recurse-submodules http://125.71.201.11:9004/cube/cube-java.git -b 2.x.x
-```
 
 ### 项目结构说明
 
@@ -78,7 +65,7 @@ git clone --recurse-submodules http://125.71.201.11:9004/cube/cube-java.git -b 2
 │  ├─cube-cloud-modules 微服务相关服务模块
 │  │  ├─cube-cloud-gateway 微服务网关
 │  │  ├─cube-cloud-monitor 微服务监控服务
-│  ├─cube-commons 魔方功能插件（基于SpringBoot）
+│  ├─cube-plugins-starters 魔方功能插件（基于SpringBoot）
 │  │  ├─sql-export 动态SQL导出插件
 │  │  ├─sensitive-starter 字符串脱敏插件
 │  │  ├─easy-excel-starter Excel导入导出插件
