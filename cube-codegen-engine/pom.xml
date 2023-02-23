@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>cube-codegen-engine</artifactId>
+    <groupId>org.cube.codegen</groupId>
+    <packaging>pom</packaging>
+
+    <parent>
+        <artifactId>cube-dependencies</artifactId>
+        <groupId>org.cube</groupId>
+        <version>2.6.5</version>
+    </parent>
+
+    <modules>
+        <module>cube-codegen-core</module>
+        <module>cube-codegen-annotations</module>
+        <module>cube-codegen-web</module>
+        <module>cube-codegen-dbSync</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

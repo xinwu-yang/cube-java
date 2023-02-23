@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cube.modules.system.enhancement.mapper.CubePermissionHistoryMapper">
+
+    <resultMap id="PermissionClickCount" type="org.cube.modules.system.enhancement.model.PermissionClickCount">
+        <result column="name" property="permissionName"/>
+        <result column="clickCount" property="clickCount"/>
+        <result column="createTime" property="createTime"/>
+    </resultMap>
+
+    <select id="queryPermissionClickCount" parameterType="Object" resultMap="PermissionClickCount">
+        select
+            sphc.createTime,
+            sp.name,
+            sphc.clickCount
+        from
+            (
+            select
+                sph.permission_id,
+                count(sph.id) as clickCount,
+                DATE_FORMAT(sph.create_time,'%Y-%m-%d') as createTime
+            from
+                sys_permission_history sph
+            join sys_user su on su.id = sph.user_id
+            <if test="query.departId !=null and query.departId != ''">
+                join sys_user_depart sud on sud.user_id = sph.user_id
+            </if>
+            where
+                1 = 1
+            <if test="query.userId !=null and query.userId != ''">
+                and su.username like CONCAT(CONCAT('%', #{query.userId}), '%')
+            </if>
+            <if test="query.departId !=null and query.departId != ''">
+                and sud.dep_id = #{query.departId}
+            </if>
+            group by
+                permission_id,
+                DATE_FORMAT( sph.create_time, '%Y-%m-%d' ) ) sphc
+        join sys_permission sp on
+            sp.id = sphc.permission_id
+        <if test="query.begin !=null and query.begin != '' and query.end !=null and query.end != ''">
+            where sphc.createTime between #{query.begin} and  #{query.end}
+        </if>
+        order by
+            sphc.createTime desc,
+            sphc.clickCount desc
+    </select>
+</mapper>

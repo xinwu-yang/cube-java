@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>cube-cloud-starters</artifactId>
+    <groupId>org.cube.cloud.plugin</groupId>
+    <packaging>pom</packaging>
+
+    <parent>
+        <artifactId>cube-dependencies</artifactId>
+        <groupId>org.cube</groupId>
+        <version>2.6.5</version>
+    </parent>
+
+    <modules>
+        <module>starter-cloud-core</module>
+        <module>starter-job</module>
+        <module>starter-lock</module>
+        <module>starter-rabbitmq</module>
+        <module>starter-redis</module>
+        <module>starter-seata</module>
+        <module>starter-shardingsphere</module>
+        <module>starter-rocketmq</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.cube.base</groupId>
+            <artifactId>base-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.cube.base</groupId>
+            <artifactId>base-annotations</artifactId>
+        </dependency>
+        <!--加载配置信息-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+</project>

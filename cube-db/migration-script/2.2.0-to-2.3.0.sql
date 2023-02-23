@@ -1,0 +1,9 @@
+ALTER TABLE `sys_user` ADD COLUMN `first_login` bit(1) NOT NULL DEFAULT 1 COMMENT '是否首次登录（0否 1是）' AFTER `rel_tenant_ids`;
+INSERT INTO `sys_permission` VALUES ('1438041680501059586', '700b7f95165c46cc7a78bf227aa8fed3', '运行环境', '/monitor/EnvironmentInfo', 'modules/monitor/EnvironmentInfo', NULL, NULL, 1, NULL, '1', 8.00, 0, NULL, 1, 1, 0, 0, NULL, 'admin', '2021-09-15 15:27:09', 'admin', '2021-09-15 15:47:55', 0, 0, '1', 0);
+INSERT INTO `sys_permission` VALUES ('1437700059899138049', '700b7f95165c46cc7a78bf227aa8fed3', '连接池信息', '/monitor/datasource', 'modules/monitor/ConnectionInfo', NULL, NULL, 1, NULL, '1', 1.00, 0, NULL, 1, 1, 0, 0, NULL, 'admin', '2021-09-14 16:49:40', NULL, NULL, 0, 0, '1', 0);
+INSERT INTO `sys_permission` VALUES ('1446311260709236738', '58857ff846e61794c69208e9d3a85466', '日志详情', NULL, NULL, NULL, NULL, 2, 'log:detail', '1', 1.00, 0, NULL, 1, 1, 0, 0, NULL, 'llc', '2021-10-08 11:07:30', NULL, NULL, 0, 0, '1', 0);
+INSERT INTO `sys_role_permission` VALUES ('1437700111170310146', 'f6817f48af4fb3af11b9e8bf182f618b', '1437700059899138049', NULL, '2021-09-14 16:49:52', '127.0.0.1');
+INSERT INTO `sys_role_permission` VALUES ('1438041770103975937', 'f6817f48af4fb3af11b9e8bf182f618b', '1438041680501059586', NULL, '2021-09-15 15:27:30', '127.0.0.1');
+INSERT INTO `sys_role_permission` VALUES ('1438041770103975939', 'f6817f48af4fb3af11b9e8bf182f618b', '1446311260709236738', NULL, '2021-09-15 15:27:30', '127.0.0.1');
+INSERT INTO `sys_role` VALUES ('1456085100369317890', '普通用户', 'user', '普通用户', 'admin', '2021-11-04 10:25:15', NULL, NULL);
+UPDATE sys_permission set is_leaf = 0 WHERE id = '58857ff846e61794c69208e9d3a85466'

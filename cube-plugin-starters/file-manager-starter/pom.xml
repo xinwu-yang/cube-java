@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>file-manager-starter</artifactId>
+    <packaging>pom</packaging>
+
+    <parent>
+        <artifactId>cube-plugin-starters</artifactId>
+        <groupId>org.cube.plugin</groupId>
+        <version>2.6.5</version>
+    </parent>
+
+    <modules>
+        <module>file-manager</module>
+        <module>file-manager-spring-boot-starter</module>
+    </modules>
+
+    <properties>
+        <commons-io.version>2.11.0</commons-io.version>
+        <commons-net.version>3.8.0</commons-net.version>
+        <commons-logging>1.2</commons-logging>
+        <aws-sdk.version>2.17.273</aws-sdk.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.cube.plugin</groupId>
+                <artifactId>file-manager</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>${commons-net.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>s3</artifactId>
+                <version>${aws-sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>sts</artifactId>
+                <version>${aws-sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${commons-logging}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

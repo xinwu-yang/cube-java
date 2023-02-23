@@ -1,0 +1,43 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: cube-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowCredentials: true
+            allowedOriginPatterns: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      default-filters:
+        - name: CircuitBreaker #设置熔断器
+          args:
+            fallbackUri: 'forward:/fallback' #熔断之后跳转，本项目或其他项目配置
+        # 请求限流配置
+        - name: RequestRateLimiter
+          args:
+            # 如果keyResolver返回空key，则拒绝该请求403，默认true表示拒绝，false则表示允许访问
+            deny-empty-key: false
+            # 令牌桶算法每秒补充的token数量（每秒的请求数量）
+            redis-rate-limiter.replenishRate: 10
+            # 令牌桶算法token最大数量（每秒的最大请求数量）
+            redis-rate-limiter.burstCapacity: 15
+            # 单次请求消费的token数量
+            redis-rate-limiter.requestedTokens: 1
+            # 自定义的KeyResolver（从请求exchange解析id，用于区分限流的独立单元，如用户ID、remoteAddr、sessionId等）
+            key-resolver: "#{@ipKeyResolver}"
+    #      routes:
+    #        - id: cube-system
+    #          uri: lb://cube-system
+    #          predicates:
+    #            - Path=/cube/**
+    #        - id: cube-system-websocket
+    #          uri: lb:ws://cube-system
+    #          predicates:
+    #            - Path=/cube/websocket/**

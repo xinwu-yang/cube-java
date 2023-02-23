@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>cube-system-enhance</artifactId>
+
+    <parent>
+        <artifactId>cube-system-modules</artifactId>
+        <groupId>org.cube.system</groupId>
+        <version>2.6.5</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.cube.plugin</groupId>
+            <artifactId>sql-export</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-http</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+    </dependencies>
+</project>

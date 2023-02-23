@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cube-system",
+    "order": 0,
+    "predicates": [
+      {
+        "name": "Path",
+        "args": {
+          "_genkey_0": "/cube/sys/**"
+        }
+      }
+    ],
+    "filters": [],
+    "uri": "lb://cube-system"
+  },
+  {
+    "id": "cube-system-websocket",
+    "order": 1,
+    "predicates": [
+      {
+        "name": "Path",
+        "args": {
+          "_genkey_0": "/cube/websocket/**"
+        }
+      }
+    ],
+    "filters": [],
+    "uri": "lb:ws://cube-system"
+  }
+]

@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.cube.plugin.starter.magicmap.spring.boot.autoconfigure.MagicMapAutoConfiguration

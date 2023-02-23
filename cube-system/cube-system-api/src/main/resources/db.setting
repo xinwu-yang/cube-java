@@ -1,0 +1,5 @@
+## DBSync配置文件
+
+url = jdbc:mysql://25.30.15.85/cube?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+user = root
+pass = chengxun

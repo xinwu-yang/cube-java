@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>cube-system-api</artifactId>
+
+    <parent>
+        <artifactId>cube-system</artifactId>
+        <groupId>org.cube</groupId>
+        <version>2.6.5</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.cube</groupId>
+            <artifactId>cube-system-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.cube.system</groupId>
+            <artifactId>cube-system-enhance</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.cube.system</groupId>
+            <artifactId>cube-system-monitor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.bull.javamelody</groupId>
+            <artifactId>javamelody-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--微服务模式下修改为 true,跳过此打包插件，否则微服务模块无法引用-->
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>src/main/resources</directory>-->
+<!--                <filtering>true</filtering>-->
+<!--                <includes>-->
+<!--                    <include>banner.txt</include>-->
+<!--                </includes>-->
+<!--            </resource>-->
+<!--        </resources>-->
+    </build>
+</project>

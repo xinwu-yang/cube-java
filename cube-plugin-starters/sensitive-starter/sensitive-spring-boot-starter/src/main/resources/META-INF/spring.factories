@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.cube.plugin.starter.sensitive.spring.boot.autoconfigure.SensitiveAutoConfiguration

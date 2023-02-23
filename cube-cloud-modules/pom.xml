@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>cube-cloud-modules</artifactId>
+    <groupId>org.cube.cloud</groupId>
+    <version>2.6.5</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <artifactId>cube-dependencies</artifactId>
+        <groupId>org.cube</groupId>
+        <version>2.6.5</version>
+    </parent>
+
+    <properties>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+
+    <repositories>
+        <!-- 公司私服-->
+        <repository>
+            <id>tievd</id>
+            <url>http://125.71.201.14:8999/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>Aliyun-repos-public</id>
+            <name>aliyun public</name>
+            <url>https://maven.aliyun.com/repository/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <modules>
+        <module>cube-cloud-gateway</module>
+        <module>cube-cloud-monitor</module>
+    </modules>
+</project>
