@@ -33,8 +33,14 @@
     - Redisson 3.17.7
     - ShardingSphere 5.1.2
     - SpringBootAdmin 2.6.9
+	
+### 开发文档
 
-### 项目结构说明
+- [后端开发文档](https://github.com/xinwu-yang/cube-java/wiki)
+
+- [前端开发文档](https://github.com/xinwu-yang/cube-vue/wiki)
+
+### Java代码结构说明
 
 ```text
 ├─cube-java 魔方平台总依赖管理Bom
@@ -83,10 +89,4 @@
 │  │  │  ├─cube-codegen-dbSync 数据库结构同步
 │  │  │  ├─cube-codegen-web 开放的Web API
 │  │  ├─cube-codegen-ui 代码生成器模板
-├─cube-web
-│  ├─cube-block 魔方vue组件
-│  ├─cube-skin 魔方皮肤定制方案
-│  ├─cube-web-plugin（基于JavaScript）
-│  │  ├─cube-chunk-uploader 支持多线程断点续传的上传组件
-│  │  ├─cube-loading 页面loading过渡效果插件
 ```
