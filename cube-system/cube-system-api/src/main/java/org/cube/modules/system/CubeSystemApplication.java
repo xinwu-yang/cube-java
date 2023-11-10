@@ -22,8 +22,7 @@ public class CubeSystemApplication extends SpringBootServletInitializer {
         log.info("Application cube-system is running! Access URLs:");
         log.info("Local: http://localhost:{}{}/", port, path);
         log.info("External: http://{}:{}{}/", ip, port, path);
-        log.info("魔方API文档: http://25.30.15.86");
-        log.info("魔方开发文档: http://125.71.201.11:10086");
+        log.info("魔方开发文档: https://github.com/xinwu-yang/cube-java/wiki");
         log.info("API文档: http://{}:{}{}/api-docs", ip, port, path);
         log.info("----------------------------------------------------------");
     }

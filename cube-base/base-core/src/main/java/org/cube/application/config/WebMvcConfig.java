@@ -90,7 +90,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(saInterceptor).addPathPatterns(defaultConfig.getIncludes()).excludePathPatterns(excludeUrls);
 
         // 自定义拦截器注入
-        if (interceptors != null && interceptors.size() > 0) {
+        if (interceptors != null && !interceptors.isEmpty()) {
             for (HandlerInterceptor interceptor : interceptors) {
                 String name = interceptor.getClass().getSimpleName();
                 if (configs.containsKey(name)) {
@@ -103,12 +103,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addFormatters(FormatterRegistry registry) {
-        if (formatters != null && formatters.size() > 0) {
+        if (formatters != null && !formatters.isEmpty()) {
             for (Formatter<?> formatter : formatters) {
                 registry.addFormatter(formatter);
             }
         }
-        if (converters != null && converters.size() > 0) {
+        if (converters != null && !converters.isEmpty()) {
             for (Converter<?, ?> converter : converters) {
                 registry.addConverter(converter);
             }

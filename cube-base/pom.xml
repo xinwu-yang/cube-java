@@ -19,7 +19,6 @@
         <module>base-tools</module>
         <module>base-model</module>
         <module>system-local-api</module>
-        <module>system-cloud-api</module>
         <module>base-annotations</module>
     </modules>
 </project>

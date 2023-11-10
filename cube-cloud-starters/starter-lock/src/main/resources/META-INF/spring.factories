@@ -1,4 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  org.cube.starter.lock.config.RedissonConfiguration
-
-
